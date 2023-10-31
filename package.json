@@ -1,0 +1,31 @@
+{
+  "name": "hesfintech",
+  "version": "1.0.0",
+  "description": "hesfintech wp-theme",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --mode development --watch",
+    "build": "webpack --mode production"  
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": "> 0.25%, not dead",
+  "dependencies": {
+    "@babel/core": "^7.22.15",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/preset-env": "^7.22.15",
+    "babel-loader": "^9.1.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.8.1",
+    "cssnano": "^6.0.1",
+    "mini-css-extract-plugin": "^2.7.6",
+    "node-sass": "^9.0.0",
+    "postcss-loader": "^7.3.3",
+    "postcss-preset-env": "^9.1.3",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "terser-webpack-plugin": "^5.3.9",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}
