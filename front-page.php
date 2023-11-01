@@ -58,7 +58,5 @@ global $product;
         width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-
 <?php get_footer() ?>
 
-<!--sdsd23#dssF-->

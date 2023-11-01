@@ -1,8 +1,20 @@
+<?php $expo_theme_info = expo_theme_info(); ?>
+
     <footer class="expo-footer">
 		 <div class="wrapper">
              <div class="footer-title mb-2">Контакты</div>
-             <div class="footer-text mb-1">Телефоны: <a href="tel:375296121209">+375-29 612 1209</a>, <a><a href="tel:375296121209">+375-29 612 1209</a></a></div>
-             <div class="footer-text">Адрес: Alice & Whittles Inc. , 4773 Yonge Street, Suite 5E C/O GOOD & WELL, Toronto ON M2N 0G2, Canada</div>
+             <div class="footer-text mb-1">Телефоны:
+                 <?php if ( ! empty( $expo_theme_info['phone_1'] ) ): ?>
+                     <a href="tel:+<?php echo str_replace( array( ' ', '-', '+' ), array( '', '', '' ), $expo_theme_info['phone_1'] ) ?>"><?php echo $expo_theme_info['phone_1'] ?></a>
+                 <?php endif; ?>
+                 &nbsp;
+                 <?php if ( ! empty( $expo_theme_info['phone_2'] ) ): ?>
+                     <a href="tel:+<?php echo str_replace( array( ' ', '-', '+' ), array( '', '', '' ), $expo_theme_info['phone_2'] ) ?>"><?php echo $expo_theme_info['phone_2'] ?></a>
+                 <?php endif; ?>
+             </div>
+             <?php if ( ! empty( $expo_theme_info['address'] ) ): ?>
+             <div class="footer-text">Адрес: <?php echo $expo_theme_info['address'] ?></div>
+             <?php endif; ?>
          </div>
 	</footer>
 </div>
