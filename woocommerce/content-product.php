@@ -12,6 +12,9 @@ if (empty($product) || !$product->is_visible()) {
 
 <div <?php wc_product_class('expo-product-card', $product); ?>>
     <div class="product-card">
+        <div class="ajax-loader">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/rolling.svg" alt="">
+        </div>
         <?php
         /**
          * Hook: woocommerce_before_shop_loop_item.
@@ -54,7 +57,7 @@ if (empty($product) || !$product->is_visible()) {
                     <h4>
                         <a href="<?php echo $product->get_permalink() ?>"><?php echo $product->get_title() ?></a>
                     </h4>
-                    <?php woocommerce_template_loop_rating();?>
+                    <?php woocommerce_template_loop_rating(); ?>
                 </div>
 
                 <h4 class="mt-05 mb-1 fw-400"><?php echo $product->get_sku() ?></h4>
@@ -87,6 +90,3 @@ if (empty($product) || !$product->is_visible()) {
 
     </div><!-- ./product-card -->
 </div><!-- ./col-lg-3 col-md-4 col-sm-6 mb-3 -->
-
-
-
