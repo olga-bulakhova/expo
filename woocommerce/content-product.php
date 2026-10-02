@@ -60,7 +60,15 @@ if (empty($product) || !$product->is_visible()) {
                     <?php woocommerce_template_loop_rating(); ?>
                 </div>
 
-                <h4 class="mt-05 mb-1 fw-400"><?php echo $product->get_sku() ?></h4>
+                <h4 class="mt-05 mb-1 fw-400">
+                    <?php
+
+                    if (!empty($product->get_sku())) {
+                        echo 'Артикул: ' . $product->get_sku();
+                    }
+
+                    ?>
+                </h4>
 
                 <?php
                 /**

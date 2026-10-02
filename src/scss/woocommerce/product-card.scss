@@ -19,8 +19,28 @@
 		line-height: 0;
 		overflow: hidden;
 
+		a {
+			display: block;
+			max-height: 300px;
+			overflow: hidden;
+		}
+
 		img {
-			height: auto !important;
+			height: 100% !important;
+			width: 100% !important;
+			max-height: 300px;
+			object-fit: cover;
+			//	height: auto !important;
+		}
+
+		@media (max-width: $sm) {
+			a {
+				max-height: 350px;
+			}
+
+			img {
+				max-height: 350px;
+			}
 		}
 	}
 
